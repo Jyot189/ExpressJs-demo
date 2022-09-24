@@ -21,7 +21,7 @@ router.get('/', function (req, res) {
         console.log(err);
         if (!err){
             // req.flash('success', 'User added successfully!');
-            res.redirect('/');
+            res.redirect('/login');
         }
         else{
             console.log('Error during record insertion : ' + err);
