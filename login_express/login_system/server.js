@@ -3,11 +3,11 @@ const app = express();
 const path = require('path');
 const router = express.Router();
 
-const login =require('./router/login.js');
-const signup= require('./router/signup.js');
-const person= require('./router/person_info.js');
-const personLogin=require('./router/person_login.js');
-const welcomePerson=require('./router/welcome.js');
+const login =require('./backend/router/login.js');
+const signup= require('./backend/router/signup.js');
+const person= require('./backend/router/person_info.js');
+const personLogin=require('./backend/router/person_login.js');
+const welcomePerson=require('./backend/router/welcome.js');
 
 app.use('/login',login);
 app.use('/signup',signup);
@@ -19,7 +19,7 @@ const port=process.env.PORT || 5000
 
 router.get('/',(req,res)=>{
     console.log(__dirname);
-    res.sendFile(path.join(__dirname+'/router/component'+'/index.html'));
+    res.sendFile(path.join(__dirname+'/fonted/component'+'/index.html'));
 });
 
 app.use('/',router);

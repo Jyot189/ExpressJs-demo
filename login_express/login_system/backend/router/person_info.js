@@ -5,7 +5,6 @@ const signupSchema = require('../schema/signupSchema')
 
 router.get('/', function (req, res) {
     var personInfo = req.query;
-    
     const newPerson = new signupSchema({
         firstName: req.query.firstName,
         lastName: req.query.lastName,
